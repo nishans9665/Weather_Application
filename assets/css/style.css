@@ -1,3 +1,7 @@
+@font-face {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    src: url();
+}
 .main-header-dev {
     background-color: antiquewhite;
     display: flex;
@@ -14,6 +18,10 @@
     height: auto;
     justify-content: right;
     align-content: center;
+}
+.page-title-dev .page-title {
+    font-size: 20px;
+    font-family: "Stack Sans Headline", sans-serif; 
 }
 
 .header-left-side .logo img{
