@@ -31,5 +31,6 @@ document.getElementById("cityInput").addEventListener("keyup", function (event) 
     .catch (() => {
         alert("City not fond");
     })
+
 }
 });
