@@ -8,27 +8,92 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Doto:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=M+PLUS+Rounded+1c&family=Stack+Sans+Headline:wght@200..700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="main-header-dev">
-                <div class="header-left-side">
-                    <div class="logo">
-                        <img src="assets/image/sun_logo.png" alt="">
+    <nav class="navbar-section">
+        <div class="navbar container">
+            <div class="logo-title">
+                <img src="assets/image/sun_logo.png" alt="Logo" class="nav-logo">
+                <span class="nav-title">Weather Forecast</span>
+            </div>
+
+            <div class="nav-search">
+                <input type="text" id="cityInput" placeholder="Enter city">
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div class="row hero-body">
+
+            <!-- Right Side Main Weather Details -->
+            <div class="right-details-box">
+
+                <div class="weather-row-1">
+                    <div class="weather-image">
+                        <img src="assets/image/sun_logo.png" id="condition" alt="weather icon">
                     </div>
-                    <div class="page-title-dev">
-                        <h1 class="page-title">Weather Forcast</h1>
+
+                    <div class="weather-details">
+                        <label id="city_name" for="city_name" class="city">Colombo</label>
+                        <span class="country" id="country">Sri Lanka</span>
+                        <label class="temp" for=""><span class="temp" id="temp">13</span>&#8451;</label>
+                        <span class="condition" id="condition-live">Fog</span>
+                        <span class="date" id="ontime">Saturday, November 15 2025</span>
                     </div>
                 </div>
 
-                <div class="header-right-side">
-                    <input type="text" placeholder="city">
+                <div class="weather-row-2">
+                    <div class="sunrise">
+                        <img src="assets/image/sunrise_136741.png" alt="sunrise">
+                        <p>Sunrise</p>
+                        <label for="Sunrise">6:01 AM</label>
+                    </div>
+                     
+                    <div class="sunset">
+                        <img src="assets/image/sunset_3226463.png" alt="sunset">
+                        <p>Sunset</p>
+                        <label for="Sunset">5:49 PM</label>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Left Side (Extra Weather Stats) -->
+            <div class="left-details-box">
+                <div class="weather-details-col">
+                    <h4>Wind Speed</h4>
+                    <span id="windSpeed">3 km/h</span>
+
+                    <h4>Cloud Cover</h4>
+                    <span id="cloudcover">100%</span>
+
+                    <h4>Pressure</h4>
+                    <span id="pressure">1016 hPa</span>
+                </div>
+
+                <div class="weather-details-col">
+                    <h4>Humidity</h4>
+                    <span id="humidity">98%</span>
+
+                    <h4>UV Index</h4>
+                    <span id="uvindex">0 (Low)</span>
+
+                    <h4>Visibility</h4>
+                    <span id="visibility">0 km</span>
                 </div>
             </div>
+
         </div>
     </div>
+
 
 
 
