@@ -88,7 +88,7 @@ To fetch live weather data, you need an API key from **WeatherAPI**.
     ```
 ---
 
-**Live Demo** - https://nishans9665.github.io/Weather_Application/
+**Live Demo** - https://nishans9665.github.io/Horizon-Weather-Real-Time-Location-City-Based-Weather-App/
 
 ---
 
