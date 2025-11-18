@@ -59,7 +59,7 @@ The layout is built with **Flexbox** and scalable units to ensure the applicatio
 
 1.  **Clone the project:**
     ```bash
-    git clone [https://github.com/your-username/weather-app.git](https://github.com/your-username/weather-app.git)
+    git clone https://github.com/nishans9665/Weather_Application.git
     ```
 2.  **Open the directory:**
     ```bash
