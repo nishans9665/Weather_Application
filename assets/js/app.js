@@ -10,8 +10,9 @@ document.getElementById("cityInput").addEventListener("keyup", function (event) 
             return;
         }
 
-        
-        fetch(`https://api.weatherapi.com/v1/current.json?key=0cefa4b38aae4e3595a95844251611&q=${city}`)
+
+        fetch(`https://api.weatherapi.com/v1/forecast.json?key=0cefa4b38aae4e3595a95844251611&q=${city}&days=7`)
+
 
             .then(res => res.json())
             .then(data => updateUI(data))
@@ -25,8 +26,8 @@ navigator.geolocation.getCurrentPosition(success, error);
 function success(position) {
     const lat = position.coords.latitude;
     const lon = position.coords.longitude;
-    
-    fetch(`https://api.weatherapi.com/v1/current.json?key=0cefa4b38aae4e3595a95844251611&q=${lat},${lon}`)
+
+    fetch(`https://api.weatherapi.com/v1/forecast.json?key=0cefa4b38aae4e3595a95844251611&q=${lat},${lon}&days=7`)
 
         .then(res => res.json())
         .then(data => updateUI(data))
@@ -53,4 +54,29 @@ function updateUI(data) {
     document.getElementById("humidity").textContent = data.current.humidity;
     document.getElementById("uvindex").textContent = data.current.uv;
     document.getElementById("visibility").textContent = data.current.vis_km;
+
+    loadForecast(data);
 }
+
+function loadForecast(data) {
+    const forecastContainer = document.getElementById("forecastContainer");
+    forecastContainer.innerHTML = ""; // clear old data
+
+    const days = data.forecast.forecastday;
+
+    days.forEach(day => {
+        const card = `
+            <div class="forecast-card">
+                <div class="forecast-date">${day.date}</div>
+                <img src="https:${day.day.condition.icon}" alt="">
+                <div class="forecast-temp">${day.day.avgtemp_c}°C</div>
+                <div class="forecast-condition">${day.day.condition.text}</div>
+            </div>
+        `;
+        forecastContainer.innerHTML += card;
+    });
+}
+
+
+
+

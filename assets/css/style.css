@@ -2,9 +2,11 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     src: url();
 }
+
 a {
-    text-decoration: none !important;
+    text-decoration: none;
 }
+
 .navbar-section {
     width: 100%;
     padding: 15px 25px;
@@ -28,7 +30,7 @@ a {
 
 .nav-title {
     font-size: 30px;
-    text-decoration: none;
+    text-decoration: none !important;
     font-weight: 600;
     color: #ffffff;
 }
@@ -65,13 +67,18 @@ a {
     gap: 40px;
     padding: 30px;
 
-    background: rgba(255, 255, 255, 0.15);  /* transparent white */
-    backdrop-filter: blur(10px);            /* main glass effect */
-    -webkit-backdrop-filter: blur(10px);    /* Safari support */
+    background: rgba(255, 255, 255, 0.15);
+    /* transparent white */
+    backdrop-filter: blur(10px);
+    /* main glass effect */
+    -webkit-backdrop-filter: blur(10px);
+    /* Safari support */
 
     border-radius: 20px;
-    border: 1px solid rgba(8, 7, 7, 0.3); /* glass border */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);  /* soft depth */
+    border: 1px solid rgba(8, 7, 7, 0.3);
+    /* glass border */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    /* soft depth */
 }
 
 
@@ -190,13 +197,80 @@ a {
     filter: brightness(60%);
 }
 
-.country,.condition,.date {
+.country,
+.condition,
+.date {
     color: #ffffff;
 }
 
-.sunrise, .sunset p,label {
+.sunrise,
+.sunset p,
+label {
     color: #ffffff;
 }
-.weather-details-col h4, .weather-details-col span  {
+
+.weather-details-col h4,
+.weather-details-col span {
     color: #ffffff;
+}
+
+
+/* 7-Day Forecast Section */
+.forecast-section {
+    margin-top: 40px;
+    padding-bottom: 40px;
+}
+
+.forecast-title {
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+    justify-content: center;
+    margin-bottom: 50px !important;
+}
+
+.forecast-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.forecast-card {
+    min-width: 160px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.forecast-card img {
+    width: 60px;
+    margin: 5px 0;
+}
+
+.forecast-date {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.forecast-temp {
+    color: #ffe66d;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.forecast-condition {
+    color: #fff;
+    font-size: 14px;
+    margin-top: 4px;
 }
