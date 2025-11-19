@@ -10,7 +10,9 @@ document.getElementById("cityInput").addEventListener("keyup", function (event) 
             return;
         }
 
+        
         fetch(`https://api.weatherapi.com/v1/current.json?key=0cefa4b38aae4e3595a95844251611&q=${city}`)
+
             .then(res => res.json())
             .then(data => updateUI(data))
             .catch(() => alert("City not found"));
@@ -23,8 +25,9 @@ navigator.geolocation.getCurrentPosition(success, error);
 function success(position) {
     const lat = position.coords.latitude;
     const lon = position.coords.longitude;
-
+    
     fetch(`https://api.weatherapi.com/v1/current.json?key=0cefa4b38aae4e3595a95844251611&q=${lat},${lon}`)
+
         .then(res => res.json())
         .then(data => updateUI(data))
         .catch(() => alert("Unable to load weather for your location"));
