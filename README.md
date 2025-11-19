@@ -60,7 +60,7 @@ The layout is built with **Flexbox** and scalable units to ensure the applicatio
 
 1.  **Clone the project:**
     ```bash
-    git clone https://github.com/nishans9665/Weather_Application.git
+    git clone https://github.com/nishans9665/Horizon-Weather-Real-Time-Location-City-Based-Weather-App.git
     ```
 2.  **Open the directory:**
     ```bash
